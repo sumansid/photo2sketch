@@ -10,6 +10,10 @@
   <meta name="author" content="">
 
   <title>Photo2Sketch</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+  <script type="text/javascript" src="tfjs.js"></script>
+  <script type="text/javascript" src='vendor/opencv.js'></script>
+
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +21,7 @@
 </head>
 
 <body>
+  <h2 id="loading">Model Loading</h2>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -44,11 +49,12 @@
   <div class="container">
     <div align="center">
 	    <h3>Convert Photo to Sketch</h3>
-      <img src="sample.png" height="300" >
+      <!-- <img src="sample.png" height="300" >Page Content -->
 		<h1 >Upload a photo</h1>
 		<form method=post enctype=multipart/form-data>
-	<input type=file name="image">
+	<input type=file name="image" id = "uploadedImage">
 	<input type=submit>
+
 
 
 </form>
